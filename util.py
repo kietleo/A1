@@ -72,7 +72,7 @@ def get_vehicle_data():
     Load vehicle data and return it as a list: [train_x, train_y, test_x, test_y]
     """
     print('Reading vehicle data...')
-    train_x, train_y, test_x, test_y = load_list('./data/vehicles.dat')
+    train_x, train_y, test_x, test_y = load_list('data/vehicles.dat')
     train_x = np.transpose(train_x, (2,0,1))
     test_x = np.transpose(test_x, (2,0,1))
     #print(train_x.shape[0], type(train_x))
@@ -98,10 +98,10 @@ def read_mnist_gz(data_path, offset):
 
 def get_mnist_data(sampling_step=20):
     print('Reading fashion MNIST data...')
-    train_x = read_mnist_gz('./data/fashion-mnist/train-images-idx3-ubyte.gz', 16)
-    train_y = read_mnist_gz('./data/fashion-mnist/train-labels-idx1-ubyte.gz', 8)
-    test_x = read_mnist_gz('./data/fashion-mnist/t10k-images-idx3-ubyte.gz', 16)
-    test_y = read_mnist_gz('./data/fashion-mnist/t10k-labels-idx1-ubyte.gz', 8)
+    train_x = read_mnist_gz('data/fashion-mnist/train-images-idx3-ubyte.gz', 16)
+    train_y = read_mnist_gz('data/fashion-mnist/train-labels-idx1-ubyte.gz', 8)
+    test_x = read_mnist_gz('data/fashion-mnist/t10k-images-idx3-ubyte.gz', 16)
+    test_y = read_mnist_gz('data/fashion-mnist/t10k-labels-idx1-ubyte.gz', 8)
     num_train = len(train_y)
     num_test = len(test_y)
 
